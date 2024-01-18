@@ -1,0 +1,451 @@
+@import 'vars'
+@import 'mixins'
+
+*
+    margin: 0
+    padding: 0
+a
+    text-decoration: none
+
+body
+    font-family: 'Mulish'
+    overflow-x: hidden
+
+summary
+    list-style-type: none
+
+.center
+    padding-left: calc(50% - $widthSite/2)
+    padding-right: calc(50% - $widthSite/2)
+
+// .extended-center
+//     padding-left: calc(50% - $widthExtended/2)
+//     padding-right: calc(50% - $widthExtended/2)
+
+.header
+    margin: 48px 0px 78px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__links
+        display: flex
+        gap: 61px
+        align-items: center
+
+.branches-box
+    display: flex
+    gap: 71px
+
+    @include font500px()
+
+.branch
+    color: $textColorBlack
+    &:first-child
+        color: $purpleColor
+
+.right-Header-box
+    display: flex
+    align-items: center
+    justify-content: end
+    gap: 21px
+
+.burger
+    display: none
+
+.site-languages
+    position: relative
+    cursor: pointer
+    display: flex
+    align-items: center
+    gap: 5px
+    &__lang
+        @include font600px()
+
+.lang-choise
+    position: absolute
+    top: 30px
+    right: 0px
+
+.content-container
+    position: relative
+    display: flex
+    flex-direction: column
+    gap: 76px
+
+.ellipse
+    position: absolute
+    z-index: -1
+    width: 335px
+    top: -79px
+    right: -164px
+.star
+    position: absolute
+    z-index: -1
+    width: 155px
+    bottom: -35px
+    right: -104px
+.lines
+    position: absolute
+    z-index: -1
+    width: 158px
+    bottom: -35px
+    left: -77px
+
+.upper-content
+    display: flex
+    gap: 96px
+    align-items: center
+
+.filter-menu
+    display: none
+
+.bottom-content
+    position: relative
+    z-index: 2
+    display: flex
+    gap: 132px
+
+.filters
+    display: flex
+    flex-direction: column
+    gap: 30px
+    min-width: 223px
+
+.language-box
+    cursor: pointer
+    width: 200px
+    height: 51px
+    display: flex
+    gap: 18px
+    justify-content: center
+    align-items: center
+    border-radius: 100px
+    background: $purpleColor
+    color: $textColorWhite
+    &__selector
+        @include font600px()
+
+.length-box
+    &__heading
+        margin-bottom: 30px
+        @include font600px()
+    &__range
+        display: flex
+        flex-direction: column
+        gap: 10px
+        @include font500px()
+#slider
+    width: 189px
+
+.level-box
+
+    &__heading
+        margin-bottom: 30px
+        @include font600px()
+    &__radios
+        display: flex
+        flex-direction: column
+        gap: 11px
+
+.skills-box
+    &__heading
+        margin-bottom: 30px
+        @include font600px()
+    &__checkboxes
+        display: flex
+        flex-direction: column
+        gap: 11px
+
+.main-content
+    &__heading
+        display: flex
+        align-items: baseline
+        color: $textColorBlack
+        font-size: 38px
+        font-style: normal
+        font-weight: 800
+        line-height: 120%
+        letter-spacing: 0.48px
+        &_end
+            // display: block
+            padding: 7px 14px 14px
+            background: $greenColor
+            border-radius: 100px
+
+.products
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    gap: 30px
+
+.product-card
+    position: relative
+    width: 400px
+    height: 341px
+    border-radius: 30px
+    background: $purpleColor
+    // backdrop-filter: blur(2px)
+
+    &__background
+        &_img_az
+            position: absolute
+            right: 34px
+            top: 26px
+        &_img_ae
+            position: absolute
+            right: 23px
+            top: 81px
+
+    &__content
+        position: absolute
+        top: 0
+        left: 0
+        color: $textColorWhite
+        box-sizing: border-box
+        width: 100%
+        height: 100%
+        &_title
+            margin: 24px 21px 3px
+            font-size: 24px
+            font-style: normal
+            font-weight: 800
+            line-height: 120%
+            letter-spacing: 0.24px
+            &_base
+                color: $yellowColor
+        &_name
+            display: block
+            position: absolute
+            top: 91px
+            right: 78px
+            padding: 7px 14px 8px
+            border-radius: 60px
+            background: $greenColor
+            color: $textColorBlack
+        &_final-price
+            position: absolute
+            top: 183px
+            right: 82px
+            font-size: 40px
+            font-style: normal
+            font-weight: 800
+            line-height: 120%
+            letter-spacing: 0.4px
+        &_initial-price
+            position: absolute
+            top: 229px
+            right: 51px
+            font-size: 20px
+            font-style: normal
+            font-weight: 800
+            line-height: 120%
+            letter-spacing: 0.2px
+
+        &_discount
+            position: absolute
+            top: 212px
+            right: 27px
+            display: block
+            padding: 3px 10px
+            border-radius: 199px
+            color: $textColorWhite
+            background: $pinkColor
+            font-size: 10px
+            font-style: normal
+            font-weight: 600
+            line-height: 120%
+            letter-spacing: 0.1px
+        &_flag
+            position: absolute
+            top: 260px
+            right: 201px
+        &_img
+            width: 213px
+        &_line
+            position: absolute
+            top: 240px
+            right: 49px
+
+.about
+    position: absolute
+    bottom: 27px
+    right: 27px
+    display: flex
+    gap: 5px
+    align-items: baseline
+    &__text
+        @include font500px()
+        color: $textColorWhite
+.say
+    position: absolute
+    top: 120px
+    right: 249px
+
+.footer
+    margin: auto
+    margin-top: 141px
+    padding: 55px 0px 44px
+    background-color: $purpleColor
+    color: $textColorWhite
+    @include font500px()
+
+.first-row
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 51px
+
+.footer__links
+    display: flex
+    flex-direction: column
+    gap: 13px
+    &_link
+        color: $textColorWhite
+
+.copyright-box
+    display: flex
+    justify-content: center
+
+@media(max-width: 390px)
+    .center
+        padding-left: calc(50% - $widthPhone/2)
+        padding-right: calc(50% - $widthPhone/2)
+
+    .header
+        justify-content: space-between
+        margin: 33px 0px 56px
+
+    .logo
+        width: 131px
+
+    .right-Header-box
+        gap: 11px
+
+    .userImg
+        width: 40px
+
+    .branches-box
+        display: none
+    .search
+        display: none
+    .site-languages
+        display: none
+    .burger
+        cursor: pointer
+        display: block
+
+    .ellipse
+        display: none
+    .star
+        position: absolute
+        z-index: -1
+        width: 155px
+        bottom: -35px
+        right: -104px
+    .lines
+        display: none
+
+    .filters
+        display: none
+
+    .content-container
+        gap: 52px
+
+    .upper-content
+        flex-wrap: wrap
+
+    .language-box
+        width: 154px
+
+    .filter-menu
+        cursor: pointer
+        display: block
+
+    .mobile-container
+        display: flex
+        justify-content: start
+        gap: 6px
+        align-items: center
+
+    .upper-content
+        gap: 33px
+
+    .main-content__heading
+        display: flex
+        font-size: 21px
+        letter-spacing: 0.32px
+        flex-wrap: wrap
+        gap: 10px
+        &_end
+            display: block
+            padding: 9px 18px
+    .mobile
+        display: none
+    .product-card
+        width: 365px
+        height: 303px
+        &__background
+            &_img_az
+                width: 183px
+                right: 51px
+        &__content
+            &_title
+                margin: 24px 21px 12px
+                font-size: 18px
+                letter-spacing: 0.18px
+            &_name
+                padding: 7px 24px 8px
+                top: 93px
+                right: 62px
+                font-size: 12px
+                letter-spacing: 0.12px
+            &_final-price
+                top: 141px
+                right: 85px
+                font-size: 36px
+                letter-spacing: 0.36px
+            &_initial-price
+                top: 189px
+                right: 64px
+                font-size: 20px
+                letter-spacing: 0.2px
+            &_discount
+                top: 172px
+                right: 34px
+                font-size: 8px
+                letter-spacing: 0.08px
+            &_flag
+                width: 52px
+                top: 243px
+                right: 189px
+            &_img
+                width: 187px
+            &_line
+                top: 199px
+                right: 60px
+    .say
+        width: 20px
+        top: 119px
+        right: 218px
+    .about
+        &__text
+            font-size: 14px
+            letter-spacing: 0.14px
+    .star
+        overflow: hidden
+        width: 94px
+        top: -204px
+        right: -21px
+
+    .footer
+        margin-top: 60px
+        padding: 18px 0px 31px
+        font-size: 14px
+        letter-spacing: 0.14px
+        &__links
+            gap: 18px
+        &__logo
+            width: 125px
+    .first-row
+        gap: 83px
+        margin-bottom: 28px
